@@ -108,7 +108,7 @@ class MainWindow(qtw.QMainWindow):
         self.docs_widget.doc_signal.connect(self.take_doc_data)
         self.data_widget.data_signal.connect(self.take_data)
         self.create_pareto_diagram_button.clicked.connect(self.create_pareto_diagram)
-        self.sort_year_signal.connect(self.take_data)
+        self.sort_year_signal.connect(self.take_doc_data)
         self.show()
 
     def refresh_data_in_table(self):
@@ -318,7 +318,7 @@ class MainWindow(qtw.QMainWindow):
             headers = data[0]
             doc_data = data[1]
         except KeyError as e:
-            print(f"Здесь ошибка", e)
+            traceback.print_exc()
         else:
             self.fill_table(headers, doc_data, text)
 

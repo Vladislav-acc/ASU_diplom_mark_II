@@ -833,5 +833,4 @@ class TimeInfo:
 
 
 if __name__ == "__main__":
-    print(Units.show())
-
+    ...

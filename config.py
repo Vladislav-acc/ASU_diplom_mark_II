@@ -1,4 +1,6 @@
+import os
+
 HOST = 'localhost'
-USER = 'root'
-PASSWORD = 'Doctor8Pass'
+USER = os.getenv("MySQL_USER")
+PASSWORD = os.getenv("MySQL_PASSWORD")
 DATABASE = 'olimp'
